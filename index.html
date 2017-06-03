@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  <!-- design of this site partly based on www.aresluna.org -->
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,21 +16,56 @@
         margin: 0;
         padding: 0;
       }
+      h1 {
+        font-size: 150%;
+        font-weight: 200;
+        margin-bottom: 0;
+      }
+      h1::after {
+        content: '';
+        margin-top: .2em;
+        margin-bottom: .5em;
+        width: 2em;
+        height: .02em;
+        background: #E2001A;
+        display: block;
+      }
+      h2 {
+        font-size: 55%;
+        margin-top: 2em;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        color: rgb(108, 108, 108);
+      }
+      h2::after {
+        content: '';
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+        opacity: .75;
+        width: 3em;
+        height: 1px;
+        background: rgb(108, 108, 108);
+        display: block;
+      }
       article {
         margin: 80px 100px 160px 200px;
         max-width: 750px;
       }
       header { line-height: 1.3; }
       .title { font-style: italic; }
-      .note { font-size: 66%; }
+      .note { 
+        font-size: 66%; 
+        margin-top: .1em;
+      }
       .dotted:before {
         content: "·";
         padding-left: .3em;
         padding-right: .6em;
       }
       a { text-decoration: none; }
-      a:link { color: rgb(121, 21, 22); }
-      a:visited { color: rgb(121, 21, 22); }
+      a:link { color: #E2001A; }
+      a:visited { color: #E2001A; }
       a:focus { border-bottom: 1px solid; }
       a:hover { border-bottom: 1px solid; }
       ::selection { background: #FAEBDC; }
@@ -42,9 +79,10 @@
   </head>
   <body>
     <article>
+
+      <h1>Erik Behrends</h1>
+
       <header>
-        Erik Behrends
-        <br>
         <span class="title">Professor für Informatik, Software Developer</span>
         <div class="note">
           <a href="https://www.dhbw-loerrach.de/behrends.html">Work</a>
@@ -55,6 +93,18 @@
           <span class="dotted"><a href="https://www.linkedin.com/in/erikbehrends">LinkedIn</a></span>
         </div>
       </header>
+
+      <h2>About</h2>
+      <div class="note">
+        An der <a
+           href="https://www.dhbw-loerrach.de">DHBW Lörrach</a> unterrichte ich
+         in verschiedenen Gebieten der Programmierung und Softwareentwicklung.
+         In den letzten Jahren habe ich mich intensiv mit der Entwicklung von
+         mobilen Apps beschäftigt.  
+         Zur Zeit schreibe ich ein Buch über <a
+           href="https://facebook.github.io/react-native/">React Native</a>, das voraussichtlich Ende 2017 bei <a
+           href="https://www.oreilly.de">O'Reilly</a> erscheinen wird.
+      </div>
     </article>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

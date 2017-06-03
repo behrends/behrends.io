@@ -61,11 +61,20 @@
       .note { 
         font-size: 66%; 
         margin-top: .1em;
+        line-height: 1.3;
       }
       .dotted:before {
         content: "·";
         padding-left: .3em;
         padding-right: .6em;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        list-style: none;
+        margin-bottom: 1em;
       }
       a { text-decoration: none; }
       a:link { color: #4C8FDB; }
@@ -87,7 +96,6 @@
       <h1>Erik Behrends</h1>
 
       <header>
-        <span class="title">Professor f&uuml;r Informatik, Software Developer</span>
         <div class="note">
           <a href="https://www.dhbw-loerrach.de/behrends.html">Work</a>
           <span class="dotted"><a href="https://twitter.com/behrends">Twitter</a></span>
@@ -99,6 +107,7 @@
       </header>
 
       <h2>Intro</h2>
+      <span class="title">Professor f&uuml;r Informatik, Software Developer</span>
       <div class="note">
         An der <a href="https://www.dhbw-loerrach.de">DHBW L&ouml;rrach</a> 
         unterrichte ich Themen der Softwareentwicklung, insbesondere die Entwicklung 
@@ -107,6 +116,27 @@
         voraussichtlich Ende 2017 bei <a href="https://www.oreilly.de">O'Reilly</a> 
         erscheinen wird.
       </div>
+
+      <h2>Projekte</h2>
+      <ul>
+        <li>
+          <span class='title'>Campus App der DHBW L&ouml;rrach</span>
+          <div class='note'>
+          App für Studierende, Dozierende, Mitarbeiter und G&auml;ste der DHBW
+          L&ouml;rrach mit mehr als 1000 Installationen. Entwickelt f&uuml;r
+          Android und iOS mit React Native.
+          <br>
+          <a
+            href="https://play.google.com/store/apps/details?id=de.dhbwloe.loerrach.campusapp">Android
+          (PlayStore)</a>
+          <span class="dotted">
+            <a href="https://itunes.apple.com/de/app/dhbw-lorrach-campus-app/id1106917276">iOS
+              (AppStore)</a>
+          </span>
+          <span class="dotted"><a href="https://github.com/DHBWLoerrach/CampusApp">Quellcode (Github)</a></span>
+          </div>
+        </li>
+      </ul>
     </article>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

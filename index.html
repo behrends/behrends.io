@@ -6,39 +6,57 @@
     <link rel="stylesheet" href="normalize.css">
     <style>
       body {
-        max-width: 42em;
-        margin: 3em auto;
-        background-color: #f7f6f0;
-        font:18px/28px -apple-system-font, Helvetica, Arial, sans serif;
+        background: #FAF8F6;
         color: #444444;
+        font-family: Georgia;
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
       }
-      h1 { font-size: 250%; }
-      p {
-        font-size: 160%;
-        line-height:1.2;
+      article {
+        margin: 80px 100px 160px 200px;
+        max-width: 750px;
+      }
+      header { line-height: 1.3; }
+      .title { font-style: italic; }
+      .note { font-size: 66%; }
+      .dotted:before {
+        content: "·";
+        padding-left: .3em;
+        padding-right: .6em;
       }
       a { text-decoration: none; }
       a:link { color: rgb(121, 21, 22); }
       a:visited { color: rgb(121, 21, 22); }
       a:focus { border-bottom: 1px solid; }
       a:hover { border-bottom: 1px solid; }
+      ::selection { background: #FAEBDC; }
+      @media screen and (max-width: 767px) {
+        article {
+          font-size: 200px;
+          margin-bottom: 80px;
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>Erik Behrends</h1>
-    <p>
-      <a href="https://www.dhbw-loerrach.de/behrends.html">
-      Professor für Informatik</a> (DHBW Lörrach)
-    </p>
-    <p>
-      <a href="https://www.github.com/behrends">github</a>
-      &middot;
-      <a href="https://www.twitter.com/behrends">twitter</a>
-      &middot;
-      <a href="https://www.xing.com/profile/Erik_Behrends">xing</a>
-      &middot;
-      <a href="https://www.linkedin.com/in/erikbehrends">linkedin</a>
-    </p>
+    <article>
+    <header>
+      Erik Behrends
+      <br>
+      <span class="title">Professor für Informatik, Software Developer</span>
+      <div class="note">
+        <a href="https://www.dhbw-loerrach.de/behrends.html">Work</a>
+        <span class="dotted"><a href="https://twitter.com/behrends">Twitter</a></span>
+        <span class="dotted"><a href="mailto:spam@behrends.io">Email</a></span>
+        <span class="dotted"><a href="https://github.com/behrends">Github</a></span>
+        <span class="dotted"><a href="https://www.xing.com/profile/Erik_Behrends">Xing</a></span>
+        <span class="dotted"><a href="https://www.linkedin.com/in/erikbehrends">LinkedIn</a></span>
+      </div>
+    </header>
+    </article>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

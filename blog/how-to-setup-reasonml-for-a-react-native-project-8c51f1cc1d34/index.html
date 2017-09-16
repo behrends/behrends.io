@@ -47,7 +47,10 @@ cd AppWithReason
       </code></pre>
 
       <p class="note">
-        Obviously, as we are working with some libraries that are in an early stage of development you should put your project under version control with git, so you might want to start committing in git now and after each of the following steps. We are going to use npm because it is used in the Reason docs but it should work with yarn as well.
+        Obviously, as we are working with some libraries that are in an early
+        stage of development you should put your project under version control
+        with git, so you might want to start committing in git now and after
+        each of the following steps. We are going to use yarn but it should work with npm as well.
       </p>
 
       <h2>Add BuckleScript to the project</h2>
@@ -57,7 +60,7 @@ cd AppWithReason
       </p>
 
 <pre class="note"><code>
-npm install --save-dev bs-platform
+yarn add bs-platform
 </code></pre>
 
       <p class="note">
@@ -70,17 +73,20 @@ Once we are done with the setup, BuckleScript will automatically compile Reason 
       </p>
 
       <pre class="note"><code>
-npm install --save-dev reason-react
+yarn add reason-react
       </code></pre>
 
       <h2>Provide BuckleScript bindings for React Native</h2>
 
       <p class="note">
-        In addition to React features provided by ReasonReact we want to be able to use React Native components and APIs. There are <a href="https://github.com/BuckleTypes/bs-react-native">BuckleScript bindings for React Native</a>, which we add to our project directly from github because they are still in an early stage of development:
+        In addition to React features provided by ReasonReact we want to be able
+        to use React Native components and APIs. There are <a
+          href="https://github.com/BuckleTypes/bs-react-native">BuckleScript
+          bindings for React Native</a>, which we add to our project as follows:
       </p>
 
       <pre class="note"><code>
-npm install --save-dev https://github.com/BuckleTypes/bs-react-native.git
+yarn add bs-react-native
       </code></pre>
 
       <h2>Configure BuckleScript</h2>
@@ -94,6 +100,7 @@ npm install --save-dev https://github.com/BuckleTypes/bs-react-native.git
   "reason": {
       "react-jsx": 2
   },
+  "bsc-flags": ["-bs-super-errors"],
   "bs-dependencies": ["bs-react-native", "reason-react"],
   "sources": [{
       "dir": "re"
@@ -118,7 +125,7 @@ npm install --save-dev https://github.com/BuckleTypes/bs-react-native.git
   "android": "react-native-scripts android",
   "ios": "react-native-scripts ios",
   "test": "node node_modules/jest/bin/jest.js --watch",
-  "build": "bsb -make-world -clean-world"
+  "build": "bsb -make-world -clean-world",
   "watch": "bsb -make-world -clean-world -w"
 },
       </code></pre>
@@ -137,7 +144,7 @@ mkdir re
       </p>
 
       <pre class="note"><code>
-npm run watch
+yarn run watch
       </code></pre>
 
       <p class="note">

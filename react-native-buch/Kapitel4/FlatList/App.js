@@ -6,7 +6,7 @@ export default class App extends React.Component {
 
   _addItem(text) {
     this.setState({
-      items: [...this.state.items, { text, date: new Date() }]
+      items: [...this.state.items, { text, date: Date.now() }]
     });
   }
 

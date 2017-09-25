@@ -60,9 +60,8 @@ const styles = StyleSheet.create({
   },
   listHeader: {
     color: 'gray',
-    fontWeight: '600',
     backgroundColor: 'lightcyan',
-    paddingHorizontal: 5
+    textAlign: 'center'
   },
   listSeparator: {
     height: StyleSheet.hairlineWidth,

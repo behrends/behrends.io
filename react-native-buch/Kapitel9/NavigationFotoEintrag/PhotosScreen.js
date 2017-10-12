@@ -10,8 +10,6 @@ import {
 
 import TouchableItem from '../components/TouchableItem';
 
-import Store from '../Store';
-
 export default class PhotosScreen extends Component {
   _getPhotos(items) {
     return items.map(item => (

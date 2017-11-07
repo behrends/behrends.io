@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -10,7 +10,7 @@ import JournalItems from './JournalItems';
 
 const journalItems = [];
 
-export default class App extends React.Component {
+export default class App extends Component {
   state = { items: journalItems };
 
   _addItem(text) {

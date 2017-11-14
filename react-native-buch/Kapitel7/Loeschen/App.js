@@ -19,7 +19,7 @@ export default class App extends Component {
   };
 
   _getSectionTitleFromDate(date) {
-    const dateObj = new Date(date);
+    const dateObj = Date.now();
     const day = dateObj.getDate();
     const month = dateObj.getMonth() + 1;
     const year = dateObj.getFullYear();
@@ -50,7 +50,7 @@ export default class App extends Component {
   _addItem(text, photo) {
     let { items } = this.state;
     // Neuen Eintrag am Anfang der Liste eintragen und speichern
-    const newItem = { text, photo, date: new Date().getTime() };
+    const newItem = { text, photo, date: Date.now() };
     items = [newItem, ...items];
     this.setState({ items: items });
     Store.saveItems(items);

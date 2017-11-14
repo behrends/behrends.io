@@ -50,7 +50,7 @@ export default class App extends Component {
   _addItem(item) {
     let { items } = this.state;
     // Neuen Eintrag am Anfang der Liste eintragen und speichern
-    item.date = new Date().getTime();
+    item.date = Date.now();
     items = [item, ...items];
     this.setState({ items: items });
     Store.saveItems(items);

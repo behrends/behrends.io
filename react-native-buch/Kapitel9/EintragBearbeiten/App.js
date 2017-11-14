@@ -19,7 +19,7 @@ export default class App extends Component {
     let { items } = this.state;
     if (item.date === null) {
       // Neuer Eintrag am Anfang der Liste eintragen und speichern
-      item.date = new Date().getTime();
+      item.date = Date.now();
       items = [item, ...items];
     } else {
       // Bestehenden Eintrag in Liste aktualisieren

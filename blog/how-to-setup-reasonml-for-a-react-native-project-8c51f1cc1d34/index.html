@@ -132,7 +132,8 @@ yarn add bs-react-native
   "bs-dependencies": ["bs-react-native", "reason-react"],
   "sources": [{
       "dir": "re"
-  }]
+  }],
+  "refmt": 3
 }
       </code></pre>
 
@@ -193,10 +194,9 @@ yarn run watch
     </p>
 
     <pre class="note"><code>
-open ReactNative;
-let app () =&gt;
-  &lt;View style=Style.(style [flex 1., justifyContent `center,
-  alignItems `center])&gt;
+open BsReactNative;
+let app = () =&gt;
+  &lt;View style=Style.(style([flex(1.), justifyContent(Center), alignItems(Center)]))&gt;
     &lt;Text value="Reason is great!" /&gt;
   &lt;/View&gt;;
       </code></pre>

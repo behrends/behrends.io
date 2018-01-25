@@ -40,12 +40,11 @@
 
     <p class="note">
       Functional languages with a static type system that compile to JavaScript could offer a comprehensive solution.
-      <a
-        href="http://elm-lang.org/">Elm</a> is one example mainly targeting web applications while
-        <a href="http://facebook.github.io/reason/">ReasonML (or simply Reason)</a> is a general purpose language. Reason is a new syntax for
-        <a href="https://ocaml.org">OCaml</a> with several compile targets next to JavaScript. For the React and React Native communities, Reason is
-        especially worth paying attention to as it is developed and promoted by members of the React team. Although Reason
-        is still heavily under development, I wanted to take Reason for a spin in a React Native project.
+      <a href="http://elm-lang.org/">Elm</a> is one example mainly targeting web applications while
+      <a href="http://facebook.github.io/reason/">ReasonML (or simply Reason)</a> is a general purpose language. Reason is a new syntax for
+      <a href="https://ocaml.org">OCaml</a> with several compile targets next to JavaScript. For the React and React Native communities, Reason is especially
+      worth paying attention to as it is developed and promoted by members of the React team. Although Reason is still heavily
+      under development, I wanted to take Reason for a spin in a React Native project.
     </p>
 
     <p class="note">
@@ -231,7 +230,8 @@ export default app;
     </p>
 
     <pre class="note"><code>
-lib/
+/lib
+.bsb-lock
 .merlin
       </code></pre>
 
@@ -270,10 +270,10 @@ lib/
   </article>
   <script>
     (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-89346245-1', 'auto');

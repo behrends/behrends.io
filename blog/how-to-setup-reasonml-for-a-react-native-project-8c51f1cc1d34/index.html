@@ -1,100 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to setup ReasonML for a React Native project</title>
-    <meta name="description" content="ReasonML has the potential to take JavaScript programming to the next level. Let’s setup a React Native project to start playing with Reason for app development.">
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
-  </head>
-  <body>
-    <article>
 
-      <h1>How to setup ReasonML for a React Native project</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to setup ReasonML for a React Native project</title>
+  <meta name="description" content="ReasonML has the potential to take JavaScript programming to the next level. Let’s setup a React Native project to start playing with Reason for app development.">
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+</head>
 
-      <header>
-        <div class="note">
-          <a href="/">Home</a>
-        </div>
-      </header>
+<body>
+  <article>
 
-      <h2>Summary</h2>
+    <h1>How to setup ReasonML for a React Native project</h1>
+
+    <header>
       <div class="note">
-        We'll walk through the setup process to enable ReasonML for your next React Native project.
+        <a href="/">Home</a>
       </div>
+    </header>
 
-      <p class="note">
-      It is well known that JavaScript has flaws. But even if its syntax and semantics were perfect, JavaScript would still be a <a href="https://www.destroyallsoftware.com/talks/wat">dynamic, untyped scripting language</a> with many inherent weak spots (<code>undefined is not a function</code>). In an effort to mitigate these, Facebook came up with <a href="https://flow.org/">Flow</a> (a static type checker for JavaScript) and Microsoft created <a href="https://www.typescriptlang.org/">TypeScript</a> (a syntactical, typed superset of JavaScript) — to add static typing to JavaScript. Thus, errors in code can be detected already at compile time as opposed to risking runtime failures caused by bugs related to JavaScript’s untyped nature. These efforts certainly support engineering teams in obtaining more robust code bases — but aren’t we still only “sugar coating” JavaScript with these extra layers?
-      </p>
+    <h2>Summary</h2>
+    <div class="note">
+      We'll walk through the setup process to enable ReasonML for your next React Native project.
+    </div>
 
-      <p class="note">
-      Functional languages with a static type system that compile to JavaScript could offer a comprehensive solution. <a href="http://elm-lang.org/">Elm</a> is one example mainly targeting web applications while <a href="http://facebook.github.io/reason/">ReasonML (or simply Reason)</a> is a general purpose language. Reason is a new syntax for <a href="https://ocaml.org">OCaml</a> with several compile targets next to JavaScript. For the React and React Native communities, Reason is especially worth paying attention to as it is developed and promoted by members of the React team. Although Reason is still heavily under development, I wanted to take Reason for a spin in a React Native project.
-      </p>
+    <p class="note">
+      It is well known that JavaScript has flaws. But even if its syntax and semantics were perfect, JavaScript would still be
+      a
+      <a href="https://www.destroyallsoftware.com/talks/wat">dynamic, untyped scripting language</a> with many inherent weak spots (
+      <code>undefined is not a function</code>). In an effort to mitigate these, Facebook came up with
+      <a href="https://flow.org/">Flow</a> (a static type checker for JavaScript) and Microsoft created
+      <a href="https://www.typescriptlang.org/">TypeScript</a> (a syntactical, typed superset of JavaScript) — to add static typing to JavaScript. Thus, errors in
+      code can be detected already at compile time as opposed to risking runtime failures caused by bugs related to JavaScript’s
+      untyped nature. These efforts certainly support engineering teams in obtaining more robust code bases — but aren’t
+      we still only “sugar coating” JavaScript with these extra layers?
+    </p>
 
-      <p class="note">
-      To get started with Reason in a React web app we could use <em><a href="https://github.com/knowbody/crra">create-reason-react-app</a></em>. As there is no <em>create-reason-react-native-app</em> yet, we need to go through a manual process to setup Reason for app development with React Native (assuming you’re already familiar with React Native):
-      </p>
+    <p class="note">
+      Functional languages with a static type system that compile to JavaScript could offer a comprehensive solution.
+      <a
+        href="http://elm-lang.org/">Elm</a> is one example mainly targeting web applications while
+        <a href="http://facebook.github.io/reason/">ReasonML (or simply Reason)</a> is a general purpose language. Reason is a new syntax for
+        <a href="https://ocaml.org">OCaml</a> with several compile targets next to JavaScript. For the React and React Native communities, Reason is
+        especially worth paying attention to as it is developed and promoted by members of the React team. Although Reason
+        is still heavily under development, I wanted to take Reason for a spin in a React Native project.
+    </p>
 
-      <h2>Create React Native App</h2>
-      <p class="note">
-        Rather than trying to integrate Reason into an existing project I created a fresh React Native project using <em><a href="http://facebook.github.io/react-native/docs/getting-started.html">create-react-native-app</a></em> and <a href="https://expo.io">Expo</a>:
-      </p>
+    <p class="note">
+      To get started with Reason in a React web app we could use
+      <em>
+        <a href="https://github.com/knowbody/crra">create-reason-react-app</a>
+      </em>. As there is no
+      <em>create-reason-react-native-app</em> yet, we need to go through a manual process to setup Reason for app development
+      with React Native (assuming you’re already familiar with React Native):
+    </p>
 
-      <pre class="note"><code>
+    <h2>Create React Native App</h2>
+    <p class="note">
+      Rather than trying to integrate Reason into an existing project I created a fresh React Native project using
+      <em>
+        <a href="http://facebook.github.io/react-native/docs/getting-started.html">create-react-native-app</a>
+      </em> and
+      <a href="https://expo.io">Expo</a>:
+    </p>
+
+    <pre class="note"><code>
 create-react-native-app AppWithReason
 cd AppWithReason
       </code></pre>
 
-      <p class="note">
-        Obviously, as we are working with some libraries that are in an early
-        stage of development you should put your project under version control
-        with git, so you might want to start committing in git now and after
-        each of the following steps. We are going to use yarn but it should work with npm as well.
-      </p>
+    <p class="note">
+      Obviously, as we are working with some libraries that are in an early stage of development you should put your project under
+      version control with git, so you might want to start committing in git now and after each of the following steps. We
+      are going to use yarn but it should work with npm as well.
+    </p>
 
-      <h2>Add BuckleScript to the project</h2>
+    <h2>Add BuckleScript to the project</h2>
 
-      <p class="note">
-        <a href="http://bucklescript.github.io/bucklescript/">BuckleScript</a> is a compiler with first level support for both OCaml and Reason which we need to add as a dependency to our project:
-      </p>
+    <p class="note">
+      <a href="http://bucklescript.github.io/bucklescript/">BuckleScript</a> is a compiler with first level support for both OCaml and Reason which we need to add as a dependency
+      to our project:
+    </p>
 
-<pre class="note"><code>
+    <pre class="note"><code>
 yarn add bs-platform
 </code></pre>
 
-      <p class="note">
-Once we are done with the setup, BuckleScript will automatically compile Reason code to JavaScript in the background for us, similar to Babel.
-      </p>
+    <p class="note">
+      Once we are done with the setup, BuckleScript will automatically compile Reason code to JavaScript in the background for
+      us, similar to Babel.
+    </p>
 
-      <h2>Include ReasonReact</h2>
-      <p class="note">
-        The React ecosystem is tightly integrated into React Native. So, in order to have React features like JSX available in Reason on the same level of abstraction like we are used to in JavaScript, we are going to include Reason language bindings for React with <a href="https://reasonml.github.io/reason-react/">ReasonReact</a>:
-      </p>
+    <h2>Include ReasonReact</h2>
+    <p class="note">
+      The React ecosystem is tightly integrated into React Native. So, in order to have React features like JSX available in Reason
+      on the same level of abstraction like we are used to in JavaScript, we are going to include Reason language bindings
+      for React with
+      <a href="https://reasonml.github.io/reason-react/">ReasonReact</a>:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 yarn add reason-react
       </code></pre>
 
-      <h2>Provide BuckleScript bindings for React Native</h2>
+    <h2>Provide BuckleScript bindings for React Native</h2>
 
-      <p class="note">
-        In addition to React features provided by ReasonReact we want to be able
-        to use React Native components and APIs. There are <a
-          href="https://github.com/BuckleTypes/bs-react-native">BuckleScript
-          bindings for React Native</a>, which we add to our project as follows:
-      </p>
+    <p class="note">
+      In addition to React features provided by ReasonReact we want to be able to use React Native components and APIs. There are
+      <a href="https://github.com/BuckleTypes/bs-react-native">BuckleScript bindings for React Native</a>, which we add to our project as follows:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 yarn add bs-react-native
       </code></pre>
 
-      <h2>Configure BuckleScript</h2>
-      <p class="note">
-        BuckleScript needs to be configured to work with JSX and the React Native bindings added previously. This is achieved by adding a file <code>bsconfig.json</code> to the root folder of the project:
-      </p>
+    <h2>Configure BuckleScript</h2>
+    <p class="note">
+      BuckleScript needs to be configured to work with JSX and the React Native bindings added previously. This is achieved by
+      adding a file
+      <code>bsconfig.json</code> to the root folder of the project:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 {
   "name": "AppWithReason",
   "reason": {
@@ -108,17 +137,25 @@ yarn add bs-react-native
 }
       </code></pre>
 
-      <p class="note">
-        Take note of the setting for <code>sources</code> where <code>re</code> is declared to be the name of the folder containing the Reason source files in our project.
-      </p>
+    <p class="note">
+      Take note of the setting for
+      <code>sources</code> where
+      <code>re</code> is declared to be the name of the folder containing the Reason source files in our project.
+    </p>
 
-      <h2>Add scripts to compile Reason to JavaScript with BuckleScript</h2>
+    <h2>Add scripts to compile Reason to JavaScript with BuckleScript</h2>
 
-      <p class="note">
-        Two scripts need to be added to <code>package.json</code>, thus simplifying the use of BuckleScript from the command line without memorizing lengthy commands. Add two lines with keys <code>build</code> and <code>watch</code> to the <code>scripts</code> section of <code>package.json</code> like this:
-      </p>
+    <p class="note">
+      Two scripts need to be added to
+      <code>package.json</code>, thus simplifying the use of BuckleScript from the command line without memorizing lengthy commands. Add two lines
+      with keys
+      <code>build</code> and
+      <code>watch</code> to the
+      <code>scripts</code> section of
+      <code>package.json</code> like this:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 "scripts": {
   "start": "react-native-scripts start",
   "eject": "react-native-scripts eject",
@@ -130,32 +167,33 @@ yarn add bs-react-native
 },
       </code></pre>
 
-      <h2>Write your first React Native component with Reason</h2>
-      <p class="note">
-        Now we can start coding in Reason! Create the folder which will contain our Reason code:
-      </p>
+    <h2>Write your first React Native component with Reason</h2>
+    <p class="note">
+      Now we can start coding in Reason! Create the folder which will contain our Reason code:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 mkdir re
       </code></pre>
 
-      <p class="note">
-        And launch BuckleScript in watch mode:
-      </p>
+    <p class="note">
+      And launch BuckleScript in watch mode:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 yarn run watch
       </code></pre>
 
-      <p class="note">
-        This will automatically compile our Reason code to JavaScript whenever a change occurs. By the way, the BuckleScript compiler is very fast and won’t slow down the fast development experience we are used to with live reload in React Native.
-      </p>
+    <p class="note">
+      This will automatically compile our Reason code to JavaScript whenever a change occurs. By the way, the BuckleScript compiler
+      is very fast and won’t slow down the fast development experience we are used to with live reload in React Native.
+    </p>
 
-      <p class="note">
-        Now switch to your editor to add your first React Native component written in Reason:
-      </p>
+    <p class="note">
+      Now switch to your editor to add your first React Native component written in Reason:
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 open ReactNative;
 let app () =&gt;
   &lt;View style=Style.(style [flex 1., justifyContent `center,
@@ -164,67 +202,83 @@ let app () =&gt;
   &lt;/View&gt;;
       </code></pre>
 
-      <p class="note">
-        And save this file as <code>re/app.re</code>.
-      </p>
+    <p class="note">
+      And save this file as
+      <code>re/app.re</code>.
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 import React from 'react';
 import { app } from './lib/js/re/app.js';
 export default app;
       </code></pre>
 
-      <p class="note">
-        This component isn’t part of our app yet. So, in order to use this component written in Reason as the app’s new root component, we need to change <code>App.js</code> like this:
-      </p>
+    <p class="note">
+      This component isn’t part of our app yet. So, in order to use this component written in Reason as the app’s new root component,
+      we need to change
+      <code>App.js</code> like this:
+    </p>
 
-      <p class="note">
-        Now we can see <code>Reason is great!</code> being displayed in our app, as defined in <code>re/app.re</code>. 
+    <p class="note">
+      Now we can see
+      <code>Reason is great!</code> being displayed in our app, as defined in
+      <code>re/app.re</code>.
 
-      </p>
+    </p>
 
-      <p class="note">
-        If you’re using git for this project, you should extend .gitignore with these two lines
-      </p>
+    <p class="note">
+      If you’re using git for this project, you should extend .gitignore with these two lines
+    </p>
 
-      <pre class="note"><code>
+    <pre class="note"><code>
 lib/
 .merlin
       </code></pre>
 
-      <p class="note">
-        <code>lib</code> is the folder where BuckleScript writes the compiled JavaScript and <code>.merlin</code> is a config file generated by Ocaml’s tool <a href="https://github.com/ocaml/merlin">Merlin</a>, that provides features like auto completion to editors. Worth mentioning is Ocaml’s type inference feature which among other benefits delivers automatically annotated code. For example in VS Code:
-      </p>
+    <p class="note">
+      <code>lib</code> is the folder where BuckleScript writes the compiled JavaScript and
+      <code>.merlin</code> is a config file generated by Ocaml’s tool
+      <a href="https://github.com/ocaml/merlin">Merlin</a>, that provides features like auto completion to editors. Worth mentioning is Ocaml’s type inference feature
+      which among other benefits delivers automatically annotated code. For example in VS Code:
+    </p>
 
-      <img src="type_inference.png" alt="Type inference">
+    <img src="type_inference.png" alt="Type inference">
 
-      <p class="note">
-        To get this working on your machine, you need to install Reason’s tool chain <a href="https://github.com/reasonml/reason-cli">reason-cli</a>. Finally, in VS Code, add the <a href="https://marketplace.visualstudio.com/items?itemName=freebroccolo.reasonml">extension for Reason</a> and the type annotations should be visible automatically.
-      </p>
+    <p class="note">
+      To get this working on your machine, you need to install Reason’s tool chain
+      <a href="https://github.com/reasonml/reason-cli">reason-cli</a>. Finally, in VS Code, add the
+      <a href="https://marketplace.visualstudio.com/items?itemName=freebroccolo.reasonml">extension for Reason</a> and the type annotations should be visible automatically.
+    </p>
 
-      <p class="note">
-        I hope you’ll have fun with Reason!
-      </p>
-
-
-      <p class="note">
-        The source code for this project can be found on <a href="https://github.com/behrends/AppWithReason">github</a>.
-      </p>
-
-      <p class="note">
-        Credits: all information found in this article was mainly compiled using <a href="https://github.com/BuckleTypes/bs-react-native">https://github.com/BuckleTypes/bs-react-native</a> and <a href="http://facebook.github.io/reason/gettingStarted.html">http://facebook.github.io/reason/gettingStarted.html</a>.
-      </p>
+    <p class="note">
+      I hope you’ll have fun with Reason!
+    </p>
 
 
-    </article>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <p class="note">
+      The source code for this project can be found on
+      <a href="https://github.com/behrends/AppWithReason">github</a>.
+    </p>
 
-      ga('create', 'UA-89346245-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+    <p class="note">
+      Credits: all information found in this article was mainly compiled using
+      <a href="https://github.com/BuckleTypes/bs-react-native">https://github.com/BuckleTypes/bs-react-native</a> and
+      <a href="http://facebook.github.io/reason/gettingStarted.html">http://facebook.github.io/reason/gettingStarted.html</a>.
+    </p>
+
+
+  </article>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89346245-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
 </html>

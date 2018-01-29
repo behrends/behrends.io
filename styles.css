@@ -23,7 +23,7 @@ h1::after {
 }
 h2 {
     font-size: 55%;
-    margin-top: 5em;
+    margin-top: 2.3em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .15em;
@@ -40,7 +40,7 @@ h2::after {
     display: block;
 }
 article {
-    margin: 80px 100px 160px 200px;
+    margin: 40px 100px 160px 200px;
     max-width: 750px;
 }
 article img {

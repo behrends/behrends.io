@@ -107,7 +107,7 @@ const FeatureCallout = props => (
     style={{ textAlign: 'center' }}
   >
     <h2>
-      Mit React Native gelingt der Einstieg in die Entwicklung nativer Apps
+      Mit diesem Buch gelingt der Einstieg in die Entwicklung nativer Apps
     </h2>
     <p>
       Mit React Native können Sie vollwertige native Apps
@@ -212,30 +212,35 @@ const Features = props => (
   </Container>
 );
 
-const TryOut = props => (
-  <Container id="buy" padding={['bottom', 'top']} background="highlight">
-    <h2 style={{ textAlign: 'center' }}>Buch kaufen</h2>
-    <PromoSection>
-      <Button
-        href="https://www.oreilly.de/buecher/13088/9783960090663-react-native.html"
-        target="_blank"
-      >
-        O'Reilly
-      </Button>
-      <Button
-        href="https://www.thalia.de/shop/home/suchartikel/react_native/erik_behrends/EAN9783960090663/ID74645976.html"
-        target="_blank"
-      >
-        Thalia
-      </Button>
-      <Button
-        href="https://www.amazon.de/React-Native-parallel-Android-entwickeln/dp/3960090668/"
-        target="_blank"
-      >
-        Amazon
-      </Button>
-    </PromoSection>
-  </Container>
+const Buy = props => (
+  <SplashContainer id="buy">
+    <Logo img_src={imgUrl('rn-book.jpg')} />
+    <div className="inner">
+      <h2 className="projectTitle" style={{ textAlign: 'center' }}>
+        Buch kaufen
+      </h2>
+      <PromoSection>
+        <Button
+          href="https://www.oreilly.de/buecher/13088/9783960090663-react-native.html"
+          target="_blank"
+        >
+          O'Reilly
+        </Button>
+        <Button
+          href="https://www.thalia.de/shop/home/suchartikel/react_native/erik_behrends/EAN9783960090663/ID74645976.html"
+          target="_blank"
+        >
+          Thalia
+        </Button>
+        <Button
+          href="https://www.amazon.de/React-Native-parallel-Android-entwickeln/dp/3960090668/"
+          target="_blank"
+        >
+          Amazon
+        </Button>
+      </PromoSection>
+    </div>
+  </SplashContainer>
 );
 
 class Index extends React.Component {
@@ -248,7 +253,7 @@ class Index extends React.Component {
         <div className="mainContainer">
           <FeatureCallout />
           <Features />
-          <TryOut />
+          <Buy />
         </div>
       </div>
     );

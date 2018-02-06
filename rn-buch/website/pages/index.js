@@ -7,7 +7,7 @@
 
 const React = require('react');
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require('../core/CompLibrary.js');
 const MarkdownBlock =
   CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -50,7 +50,7 @@ Button.defaultProps = {
 };
 
 const SplashContainer = props => (
-  <div className="homeContainer">
+  <div id={props.id} className="homeContainer">
     <div className="homeSplashFade">
       <div className="wrapper homeWrapper">{props.children}</div>
     </div>
@@ -87,11 +87,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('doc1.html', language)}>
-              Buchmaterial
-            </Button>
-            <Button href={docUrl('doc2.html', language)}>
-              Extras zum Buch
+            <Button href={docUrl('errata.html', language)}>
+              Infos zum Buch
             </Button>
             <Button href="#buy">Buch kaufen</Button>
           </PromoSection>
@@ -103,7 +100,7 @@ class HomeSplash extends React.Component {
 
 const FeatureCallout = props => (
   <div
-    className="productShowcaseSection paddingBottom"
+    className="productShowcaseSection"
     style={{ textAlign: 'center' }}
   >
     <h2>
@@ -114,12 +111,12 @@ const FeatureCallout = props => (
       plattformübergreifend mit JavaScript entwickeln. Der Einstieg in die
       App-Entwicklung ist so einfach wie nie zuvor.
     </p>
-    <br />
     <p>
       Dieses Buch zeigt Ihnen, wie Apps parallel für Android und iOS mit
       einer weitgehend einheitlichen Codebasis umgesetzt werden. Sie
       benötigen dazu lediglich Programmiererfahrung in JavaScript.
     </p>
+    <br />
   </div>
 );
 
@@ -150,17 +147,23 @@ const Features = props => (
         {
           title: 'Schneller Einstieg',
           content:
-            'Testen Sie Ihre erste eigene App nach wenigen Minuten auf dem Smartphone.'
+            'Testen Sie Ihre erste eigene App nach **wenigen Minuten** auf dem Smartphone.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-mobirise.svg`,
+          imageAlign: 'top',
         },
         {
           title: 'iPhone-Apps ohne Mac entwickeln',
           content:
-            'Programmieren Sie native Apps für das iPhone auf Windows oder Linux.'
+            'Programmieren Sie native Apps für das iPhone auf Windows oder Linux - **ein Mac wird nicht benötigt**.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-laptop.svg`,
+          imageAlign: 'top',
         },
         {
           title: 'Praktisches Basiswissen',
           content:
-            'Relevante Features neuerer Versionen von JavaScript und grundlegende Konzepte des Frameworks werden beschrieben.'
+            'Relevante Features neuerer Versionen von JavaScript und **grundlegende Konzepte** des Frameworks werden beschrieben.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-idea.svg`,
+          imageAlign: 'top',
         }
       ]}
       layout="threeColumn"
@@ -172,17 +175,23 @@ const Features = props => (
         {
           title: 'Plattformübergreifende Komponenten',
           content:
-            'Lernen Sie wichtige APIs und UI-Komponenten wie Listen kennen.'
+            'Lernen Sie **wichtige APIs und UI-Komponenten** wie Listen kennen.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-extension.svg`,
+          imageAlign: 'top',
         },
         {
           title: 'Darstellung und Styling',
           content:
-            'Erfahren Sie, wie ein displayunabhängiges Styling mit dem Flexbox-Layout erreicht wird.'
+            'Erfahren Sie, wie ein **displayunabhängiges Styling** mit dem Flexbox-Layout erreicht wird.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-magic-stick.svg`,
+          imageAlign: 'top',
         },
         {
-          title: 'Umfangreiche Beispiele',
+          title: 'Beispiel-App',
           content:
-            'Setzen Sie schrittweise eine nichttriviale App parallel für Android und iOS um, mit der Sie ein Tagebuch führen können.'
+            'Setzen Sie schrittweise eine **umfangreiche App** parallel für Android und iOS um, mit der Sie ein Tagebuch führen können.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-mobile2.svg`,
+          imageAlign: 'top',
         }
       ]}
       layout="threeColumn"
@@ -194,17 +203,23 @@ const Features = props => (
         {
           title: 'Kamera und Standort',
           content:
-            'Binden Sie Fotoaufnahmen mit der Kamera und momentane Wetterdaten für Ihren Standort ein.'
+            'Binden Sie Fotoaufnahmen der **Kamera** und momentane Wetterdaten für Ihren **Standort** ein.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-camera.svg`,
+          imageAlign: 'top',
         },
         {
           title: 'Navigation',
           content:
-            'Mehrere Screens werden durch react-navigation in einer passenden Navigationsstruktur zusammengefasst.'
+            'Mehrere Screens werden durch react-navigation in einer passenden **Navigationsstruktur** zusammengefasst.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-left-right.svg`,
+          imageAlign: 'top',
         },
         {
-          title: 'Touchgesten und Animationen',
+          title: 'Animationen und Touchgesten',
           content:
-            'Sie erhalten einen Einblick in den Umgang mit Touchgesten und Animationen.'
+            'Sie erhalten einen Einblick in den Umgang mit **Touchgesten und Animationen** zur Bereicherung der Usability.',
+          image: `${siteConfig.baseUrl}img/icons/mbri-touch-swipe.svg`,
+          imageAlign: 'top',
         }
       ]}
       layout="threeColumn"

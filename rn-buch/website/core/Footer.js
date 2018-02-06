@@ -36,21 +36,23 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Buchmaterial</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <h5>Infos zum Buch</h5>
+            <a href={this.docUrl('errata.html', this.props.language)}>
+              Korrekturen
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href={this.docUrl('links.html', this.props.language)}>
+              Links
             </a>
           </div>
           <div>
             <h5>Zum Author</h5>
             <a href="https://www.behrends.io">Webseite</a>
             <a href="https://twitter.com/behrends">Twitter</a>
+          </div>
+          <div>
+            <h5>Sonstiges</h5>
+            <a href="https://docusaurus.io/">Website based on Docusaurus</a>
+            <a href="https://mobiriseicons.com/">Icons by Mobirise</a>
           </div>
         </section>
 

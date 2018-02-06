@@ -1,10 +1,15 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Änderungen": [
+      "errata",
+      "addenda"
+    ],
+    "Infos zu den Kapiteln": [
+      "chapter2",
+      "chapter4"
+    ],
+    "Sonstiges": [
+      "links"
+    ]
   }
 }

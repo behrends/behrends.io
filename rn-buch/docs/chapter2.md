@@ -14,7 +14,7 @@ Für die App `StepCounter` enthält die Datei `App.js` den Code der einzigen Kom
 
 Code der Hauptkomponente: [App.js](assets/chapter2/App.js)  
 
-Komplettes Projekt: [StepCounter.zip](files/chapter2/StepCounter.zip)
+Komplettes Projekt: [StepCounter.zip](assets/chapter2/StepCounter.zip)
 
 Expo Snack: [snack.expo.io/H12IdYC5b](https://snack.expo.io/H12IdYC5b)
 

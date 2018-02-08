@@ -12,9 +12,9 @@ Noch keine bekannt
 
 Für die App `StepCounter` enthält die Datei `App.js` den Code der einzigen Komponente. Das komplette Projekt steht als gezipptes Archiv zum Download bereit. Für dessen Verwendung muss im entpackten Projektordner `npm install` oder `yarn ausgeführt` werden. Zusätzlich kann die App als Expo Snack im Browser getestet werden.
 
-Code der Hauptkomponente: [App.js](/chapter1/App.js)  
+Code der Hauptkomponente: [App.js](assets/chapter2/App.js)  
 
-Komplettes Projekt: [StepCounter.zip](/chapter1/StepCounter.zip)
+Komplettes Projekt: [StepCounter.zip](files/chapter2/StepCounter.zip)
 
 Expo Snack: [snack.expo.io/H12IdYC5b](https://snack.expo.io/H12IdYC5b)
 

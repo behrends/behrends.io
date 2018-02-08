@@ -4,11 +4,17 @@ title: Ergänzungen
 sidebar_label: Ergänzungen
 ---
 
-## Styling
+## Flexbox Layout
+
+Um Elemente entlang der Hauptachse mit `justifyContent` mit gleichmäßigem Abstand auszurichten steht nun auch `space-evenly` zur Verfügung:
 
 ```
-space-evenly
+<View style={{flex: 1, justifyContent: 'space-evenly', aligItems: 'center'}}>
+...
+</View>
 ```
+
+Bei `space-evenly` der Abstand zwischen den einzelnen Elementen und auch zum Displayrand gleich, wohingegen letzterer bei `space-around` anders ausfallen kann.
 
 ## react-navigation
 

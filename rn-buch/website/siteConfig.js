@@ -11,8 +11,8 @@ const siteConfig = {
   baseUrl: '/react-native-buch/' /* base url for your project */,
   projectName: 'react-native-buch',
   headerLinks: [
-    { doc: 'errata', label: 'Infos zum Buch' },
-    { page: 'index', label: 'Buch kaufen' },
+    { doc: 'addenda', label: 'Infos zum Buch' },
+    { href: '/react-native-buch#buy', label: 'Buch kaufen' },
     { page: 'help', label: 'Hilfe' }
   ],
   /* path to images for header/footer */
@@ -30,11 +30,13 @@ const siteConfig = {
   // projectName: 'test-site', // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default'
+    theme: 'default',
+    defaultLang: 'javascript'
   },
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
-  repoUrl: 'https://github.com/behrends/react-native-buch'
+  repoUrl: 'https://github.com/behrends/react-native-buch',
+  useEnglishUrl: false
 };
 
 module.exports = siteConfig;

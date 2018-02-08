@@ -7,7 +7,7 @@
 
 const React = require('react');
 
-const CompLibrary = require('../core/CompLibrary.js');
+const CompLibrary = require('../../core/CompLibrary.js');
 const MarkdownBlock =
   CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -87,7 +87,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('errata.html', language)}>
+            <Button href={docUrl('addenda.html', language)}>
               Infos zum Buch
             </Button>
             <Button href="#buy">Buch kaufen</Button>
@@ -169,6 +169,7 @@ const Features = props => (
       layout="threeColumn"
     />
     <br />
+    <br />
     <GridBlock
       align="center"
       contents={[
@@ -196,6 +197,7 @@ const Features = props => (
       ]}
       layout="threeColumn"
     />
+    <br />
     <br />
     <GridBlock
       align="center"

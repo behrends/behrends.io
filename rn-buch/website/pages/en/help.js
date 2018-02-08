@@ -7,7 +7,7 @@
 
 const React = require('react');
 
-const CompLibrary = require('../core/CompLibrary.js');
+const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
@@ -18,16 +18,16 @@ class Help extends React.Component {
     const supportLinks = [
       {
         content:
-          'Learn more using the [documentation on this site.](/test-site/docs/en/errata.html)',
-        title: 'Browse Docs',
+          `Schauen Sie in die [Liste der Korrekturen.](${siteConfig.baseUrl + 'docs/errata.html'})`,
+        title: 'Korrekturen',
       },
       {
-        content: 'Ask questions about the documentation and project',
-        title: 'Join the community',
+        content: 'Schicken Sie mir eine E-Mail: <erik@behrends.io>',
+        title: 'Kontakt',
       },
       {
-        content: "Find out what's new with this project",
-        title: 'Stay up to date',
+        content: "coming soon",
+        title: 'Newsletter',
       },
     ];
 
@@ -36,9 +36,9 @@ class Help extends React.Component {
         <Container className="mainContainer documentContainer postContainer">
           <div className="post">
             <header className="postHeader">
-              <h2>Need help?</h2>
+              <h2>Haben Sie Fragen zu React Native?</h2>
             </header>
-            <p>This project is maintained by a dedicated group of people.</p>
+            <p>Vielleicht kann ich Ihnen weiterhelfen.</p>
             <GridBlock contents={supportLinks} layout="threeColumn" />
           </div>
         </Container>

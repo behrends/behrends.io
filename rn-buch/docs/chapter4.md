@@ -1,6 +1,6 @@
 ---
 id: chapter4
-title: Kapitel 4 - Plattformübergreifende UI-Komponenten verwenden
+title: Kapitel 4 - UI-Komponenten verwenden
 sidebar_label: Kapitel 4 - UI-Komponenten
 ---
 

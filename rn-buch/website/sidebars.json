@@ -1,18 +1,16 @@
 {
   "docs": {
-    "Änderungen": [
-      "addenda",
-      "errata"
-    ],
-    "Infos zu den Kapiteln": [
+    "Änderungen": ["addenda", "errata"],
+    "Code zu den Kapiteln": [
       "chapter2",
       "chapter4",
       "chapter5",
       "chapter6",
-      "chapter7"
+      "chapter7",
+      "chapter8",
+      "chapter9",
+      "chapter10"
     ],
-    "Sonstiges": [
-      "links"
-    ]
+    "Sonstiges": ["links"]
   }
 }

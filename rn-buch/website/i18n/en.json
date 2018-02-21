@@ -6,6 +6,8 @@
     "tagline": "Native Apps parallel für Android und iOS entwickeln",
     "addenda": "Ergänzungen",
     "Ergänzungen": "Ergänzungen",
+    "chapter10": "Kapitel 10 - Touch und Animationen",
+    "Kapitel 10 - Touch / Animationen": "Kapitel 10 - Touch / Animationen",
     "chapter2": "Kapitel 2 - Erste Schritte mit React Native",
     "Kapitel 2 - Erste Schritte": "Kapitel 2 - Erste Schritte",
     "chapter4": "Kapitel 4 - UI-Komponenten verwenden",
@@ -16,6 +18,10 @@
     "Kapitel 6 - Fotos / Kamera": "Kapitel 6 - Fotos / Kamera",
     "chapter7": "Kapitel 7 - Daten speichern, aus dem Web laden",
     "Kapitel 7 - Daten (lokal, Web)": "Kapitel 7 - Daten (lokal, Web)",
+    "chapter8": "Kapitel 8 - Navigation mit Tabs",
+    "Kapitel 8 - Navigation (Tabs)": "Kapitel 8 - Navigation (Tabs)",
+    "chapter9": "Kapitel 9 - StackNavigator",
+    "Kapitel 9 - StackNavigator": "Kapitel 9 - StackNavigator",
     "errata": "Korrekturen",
     "Korrekturen": "Korrekturen",
     "links": "Linksammlung",
@@ -24,7 +30,7 @@
     "Buch kaufen": "Buch kaufen",
     "Hilfe": "Hilfe",
     "Änderungen": "Änderungen",
-    "Infos zu den Kapiteln": "Infos zu den Kapiteln",
+    "Code zu den Kapiteln": "Code zu den Kapiteln",
     "Sonstiges": "Sonstiges"
   },
   "pages-strings": {

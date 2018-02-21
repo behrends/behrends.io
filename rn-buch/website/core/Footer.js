@@ -45,13 +45,15 @@ class Footer extends React.Component {
             </a>
           </div>
           <div>
-            <h5>Zum Author</h5>
+            <h5>Zum Autor</h5>
             <a href="https://www.behrends.io">Webseite</a>
             <a href="https://twitter.com/behrends">Twitter</a>
           </div>
           <div>
             <h5>Sonstiges</h5>
-            <a href="https://docusaurus.io/">Website based on Docusaurus</a>
+            <a href="https://docusaurus.io/">
+              Website based on Docusaurus
+            </a>
             <a href="https://mobiriseicons.com/">Icons by Mobirise</a>
           </div>
         </section>

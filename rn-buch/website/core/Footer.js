@@ -51,6 +51,7 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Sonstiges</h5>
+            <a href="https://www.behrends.io/impressum.html">Impressum</a>
             <a href="https://docusaurus.io/">
               Website based on Docusaurus
             </a>
@@ -59,7 +60,7 @@ class Footer extends React.Component {
         </section>
 
         <section className="copyright">
-          Copyright &copy; {currentYear} Erik Behrends
+          Copyright &copy; {currentYear} Erik Behrends{' '}
         </section>
       </footer>
     );

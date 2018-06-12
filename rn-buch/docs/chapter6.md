@@ -26,7 +26,7 @@ _hasCameraPermissions = async () => {
   return true;
 };
 
-// vor Verwendung der Kamera werden die Berechtigungen obiger Methode abgefragt
+// vor Verwendung der Kamera werden die Berechtigungen mit obiger Methode abgefragt
 _launchCamera = async () => {
   if (this._hasCameraPermissions()) {
     const result = await ImagePicker.launchCameraAsync();

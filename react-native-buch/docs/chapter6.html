@@ -23,7 +23,7 @@ _hasCameraPermissions = <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 };
 
-<span class="hljs-comment">// vor Verwendung der Kamera werden die Berechtigungen obiger Methode abgefragt</span>
+<span class="hljs-comment">// vor Verwendung der Kamera werden die Berechtigungen mit obiger Methode abgefragt</span>
 _launchCamera = <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>._hasCameraPermissions()) {
     <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> ImagePicker.launchCameraAsync();

@@ -4,7 +4,8 @@ title: Korrekturen
 sidebar_label: Korrekturen
 ---
 
-Bisher noch keine bekannt. 
+* [Kapitel 2:](chapter2.md) Auf dem iPhone kann die App nicht mehr mit QR-Code geladen werden.
+* [Kapitel 6:](chapter6.md) Für die Verwendung der Kamera sind weitere Berechtigungen nötig.
 
 Haben Sie einen Fehler gefunden? Gerne können Sie mir dazu eine E-Mail schicken (<erik@behrends.io>). 
 

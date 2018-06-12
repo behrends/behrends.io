@@ -7,18 +7,34 @@ import {
   View
 } from 'react-native';
 import { SimpleLineIcons } from '@expo/vector-icons';
-import { ImagePicker } from 'expo';
+import { ImagePicker, Permissions } from 'expo';
 
 import TouchableItem from './TouchableItem';
 
 export default class JournalItemInput extends Component {
   state = { photo: null };
 
+  _hasCameraPermissions = async () => {
+    let permission = await Permissions.askAsync(Permissions.CAMERA);
+    if (permission.status !== 'granted') {
+      console.log('Permission to camera was denied');
+      return false;
+    }
+    permission = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+    if (permission.status !== 'granted') {
+      console.log('Permission to camera roll was denied');
+      return false;
+    }
+    return true;
+  };
+
   _launchCamera = async () => {
-    const result = await ImagePicker.launchCameraAsync();
-    if (!result.cancelled) {
-      this.setState({ photo: result.uri });
-      this.textInput.focus();
+    if (this._hasCameraPermissions()) {
+      const result = await ImagePicker.launchCameraAsync();
+      if (!result.cancelled) {
+        this.setState({ photo: result.uri });
+        this.textInput.focus();
+      }
     }
   };
 

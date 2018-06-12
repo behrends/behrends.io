@@ -8,10 +8,13 @@ sidebar_label: Kapitel 6 - Fotos / Kamera
 
 Für die Verwendung der Kamera werden in neueren Version des Expo-SDKs weitere Berechtigungen benötigt
 (`Permissions.CAMERA` und `Permissions.CAMERA_ROLL`). Bitte passen Sie den Code
-in `js/screens/EditScreen.js` entsprechend an: 
+in `JournalItemInput.js` entsprechend an: 
 
 ```
-// diese Methode der Klasse EditScreen hinzufuegen
+// import-Anweisungen mit Permissions erweitern
+import { ImagePicker, Permissions } from 'expo';
+
+// diese Methode der Klasse JournalItemInput hinzufuegen
 _hasCameraPermissions = async () => {
   let permission = await Permissions.askAsync(Permissions.CAMERA);
   if (permission.status !== 'granted') {
@@ -31,12 +34,10 @@ _launchCamera = async () => {
   if (this._hasCameraPermissions()) {
     const result = await ImagePicker.launchCameraAsync();
     if (!result.cancelled) {
-      const { item } = this.state;
-      item.photo = result.uri;
-      this.setState({ item: item });
+      this.setState({ photo: result.uri });
+      this.textInput.focus();
     }
   }
-  this.textInput.focus();
 };
 
 // ... der Rest bleibt unveraendert ...

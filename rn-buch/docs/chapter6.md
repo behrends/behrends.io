@@ -4,6 +4,46 @@ title: Kapitel 6 - Fotos mit der Kamera aufnehmen
 sidebar_label: Kapitel 6 - Fotos / Kamera
 ---
 
+### Korrekturen
+
+Für die Verwendung der Kamera werden in neueren Version des Expo-SDKs weitere Berechtigungen benötigt
+(`Permissions.CAMERA` und `Permissions.CAMERA_ROLL`). Bitte passen Sie den Code
+in `js/screens/EditScreen.js` entsprechend an: 
+
+```
+// diese Methode der Klasse EditScreen hinzufuegen
+_hasCameraPermissions = async () => {
+  let permission = await Permissions.askAsync(Permissions.CAMERA);
+  if (permission.status !== 'granted') {
+    console.log('Permission to camera was denied');
+    return false;
+  }
+  permission = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+  if (permission.status !== 'granted') {
+    console.log('Permission to camera roll was denied');
+    return false;
+  }
+  return true;
+};
+
+// vor Verwendung der Kamera werden die Berechtigungen obiger Methode abgefragt
+_launchCamera = async () => {
+  if (this._hasCameraPermissions()) {
+    const result = await ImagePicker.launchCameraAsync();
+    if (!result.cancelled) {
+      const { item } = this.state;
+      item.photo = result.uri;
+      this.setState({ item: item });
+    }
+  }
+  this.textInput.focus();
+};
+
+// ... der Rest bleibt unveraendert ...
+```
+
+### Code
+
 Beispielfoto: [foto.png](/react-native-buch/Kapitel6/foto.png)
 
 Tagebucheintrag in der Liste als eigene Komponente: [JournalItemRow.js](assets/chapter6/JournalItemRow/JournalItemRow.js) und [JournalItems.js](assets/chapter6/JournalItemRow/JournalItems.js)

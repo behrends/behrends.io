@@ -18,7 +18,7 @@ export default class App extends React.Component {
           style={styles.list}
           data={this.state.items}
           renderItem={({ item }) => <Text>{item.text}</Text>}
-          keyExtractor={item => item.date}
+          keyExtractor={item => item.date.toString()}
         />
       );
     }

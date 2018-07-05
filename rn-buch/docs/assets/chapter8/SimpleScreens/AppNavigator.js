@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 
 import { SimpleLineIcons } from '@expo/vector-icons';
 
@@ -7,7 +7,7 @@ import JournalScreen from './screens/JournalScreen';
 import PhotosScreen from './screens/PhotosScreen';
 import SettingsScreen from './screens/SettingsScreen';
 
-const Tabs = TabNavigator({
+const Tabs = createBottomTabNavigator({
   Journal: {
     screen: JournalScreen,
     navigationOptions: {

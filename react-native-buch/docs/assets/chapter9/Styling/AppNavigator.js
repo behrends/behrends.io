@@ -1,6 +1,9 @@
 import React from 'react';
 import { Platform, StatusBar } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import {
+  createBottomTabNavigator,
+  createStackNavigator
+} from 'react-navigation';
 
 import { SimpleLineIcons } from '@expo/vector-icons';
 
@@ -9,7 +12,7 @@ import PhotosScreen from './screens/PhotosScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ItemScreen from './screens/ItemScreen';
 
-const Tabs = TabNavigator(
+const Tabs = createBottomTabNavigator(
   {
     Journal: {
       screen: JournalScreen,
@@ -60,7 +63,7 @@ const Tabs = TabNavigator(
   }
 );
 
-const AppNavigator = StackNavigator(
+const AppNavigator = createStackNavigator(
   {
     Root: {
       screen: Tabs

@@ -8,9 +8,8 @@ sidebar_label: Korrekturen
 * [Kapitel 4:](chapter4.md) Im Prop `keyExtractor` der `FlatList` muss das Datum
   in einen String umgewandelt werden.
 * [Kapitel 6:](chapter6.md) Für die Verwendung der Kamera sind weitere Berechtigungen nötig.
-* [Kapitel 8:](chapter8.md) Version 2 von `react-navigation` stellt Navigatoren
-* [Kapitel 9:](chapter8.md) Version 2 von `react-navigation` stellt Navigatoren
-  als Funktionen bereit.
+* [Kapitel 8:](chapter8.md) Version 2 von `react-navigation` stellt Navigatoren als Funktionen bereit.
+* [Kapitel 9:](chapter8.md) Version 2 von `react-navigation` stellt Navigatoren als Funktionen bereit.
 
 Haben Sie einen Fehler gefunden? Gerne können Sie mir dazu eine E-Mail schicken (<erik@behrends.io>). 
 

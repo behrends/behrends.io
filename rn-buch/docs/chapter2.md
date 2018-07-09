@@ -6,11 +6,11 @@ sidebar_label: Kapitel 2 - Erste Schritte
 
 ### Korrekturen
 
-Node.js muss mindestens in Version 8 installiert werden.
+Node.js muss mindestens in Version 8 installiert werden. Das schrittweise Vorgehen zur Installation von React Native auf Windows ist in diesem [Video](https://youtu.be/v4zmZV2uOkY) zu sehen.
 
 Aufgrund strengerer Richtlinien von Apple für iOS-Apps kann man in der Expo-App auf dem iPhone die App seit Ende März 2018 nicht mehr per QR-Code mit der Kamera scannen und laden. Wenn der React Native Packager in der Konsole gestartet wurde, kann statt dessen eine URL per SMS oder E-Mail verschickt werden. Durch klicken dieser URL in der SMS bzw. E-Mail auf dem iPhone wird die Expo-App geöffnet, sodass diese den Code für die App laden und ausführen kann. Android-Geräte sind von dieser Änderung nicht betroffen.
 
-Wie eine App auf dem iPhone mit Expo geladen und ausgeführt werden kann, zeigt dieses [Video](https://youtu.be/w76_znaypW0).
+Wie eine App auf dem iPhone mit Expo per SMS geladen und ausgeführt werden kann, zeigt dieses [Video](https://youtu.be/w76_znaypW0).
 
 ### Code
 

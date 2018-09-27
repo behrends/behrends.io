@@ -27,13 +27,15 @@ Ein neues Projektverzeichnis wird nun wie folgt estellt (anstatt
 expo init StepCounter
 ```
 
-Danach kann der React Native Packager für das neue Projekt wie gewohnt gestartet
+Es sollte nun das Template `blank` gewählt werden. Danach kann der React Native Packager für das neue Projekt wie gewohnt gestartet
 werden:
 
 ```
 cd StepCounter
 npm start
 ``` 
+
+Es ist auch möglich, den Packager mit `expo start` auszuführen.
 
 ### iPhone: App in Expo laden
 

@@ -4,11 +4,23 @@ title: Kapitel 2 - Erste Schritte mit React Native
 sidebar_label: Kapitel 2 - Erste Schritte
 ---
 
-### Korrekturen
+## Korrekturen
+
+### Node.js: Version 8 oder neuer
 
 Node.js muss mindestens in Version 8 installiert werden. Das schrittweise Vorgehen zur Installation von React Native auf Windows ist in diesem [Video](https://youtu.be/v4zmZV2uOkY) zu sehen.
 
-Aufgrund strengerer Richtlinien von Apple für iOS-Apps kann man in der Expo-App auf dem iPhone die App seit Ende März 2018 nicht mehr per QR-Code mit der Kamera scannen und laden. Wenn der React Native Packager in der Konsole gestartet wurde, kann statt dessen eine URL per SMS oder E-Mail verschickt werden. Durch klicken dieser URL in der SMS bzw. E-Mail auf dem iPhone wird die Expo-App geöffnet, sodass diese den Code für die App laden und ausführen kann. Android-Geräte sind von dieser Änderung nicht betroffen.
+### `expo` statt `create-react-native-app` verwenden
+
+TODO
+
+### iPhone: App in Expo laden
+
+Aufgrund strengerer Richtlinien von Apple für iOS-Apps kann man in der Expo-App auf dem iPhone die App seit Ende März 2018 nicht mehr per QR-Code scannen und laden. Ab iOS 11 ist es möglich, den QR-Code mit der normalen Kamera-App von Apple auf dem iPhone zu scannen und die App durch Antippen der dann erscheinenden Benachrichtigung in Expo zu öffnen:   
+
+![](/react-native-buch/img/Expo-iPhone.png)
+
+Ansonsten kann die App z.B. auch per SMS geladen werden. Wenn der React Native Packager in der Konsole gestartet wurde, kann statt dessen eine URL per SMS oder E-Mail verschickt werden. Durch klicken dieser URL in der SMS bzw. E-Mail auf dem iPhone wird die Expo-App geöffnet, sodass diese den Code für die App laden und ausführen kann. Android-Geräte sind von dieser Änderung nicht betroffen.
 
 Wie eine App auf dem iPhone mit Expo per SMS geladen und ausgeführt werden kann, zeigt dieses [Video](https://youtu.be/w76_znaypW0).
 

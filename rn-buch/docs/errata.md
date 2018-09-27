@@ -4,6 +4,7 @@ title: Korrekturen
 sidebar_label: Korrekturen
 ---
 
+* [Kapitel 2:](chapter2.md) Anstatt `create-react-native-app` muss nun `expo` verwendet werden.
 * [Kapitel 2:](chapter2.md) Auf dem iPhone kann die App nicht mehr mit QR-Code geladen werden.
 * [Kapitel 2:](chapter2.md) Node.js muss mindestens in Version 8 installiert
   werden.

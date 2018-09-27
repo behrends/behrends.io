@@ -12,7 +12,28 @@ Node.js muss mindestens in Version 8 installiert werden. Das schrittweise Vorgeh
 
 ### `expo` statt `create-react-native-app` verwenden
 
-TODO
+Um neue React-Native-Projekte für Expo zu erzeugen, sollte nun das
+Kommandozeilenwerkzeug Expo CLI mit `npm` installiert werden (anstatt
+`create-react-native-app`):
+
+```
+npm install -g expo-cli
+```
+
+Ein neues Projektverzeichnis wird nun wie folgt estellt (anstatt
+`create-react-native-app`):
+
+```
+expo init StepCounter
+```
+
+Danach kann der React Native Packager für das neue Projekt wie gewohnt gestartet
+werden:
+
+```
+cd StepCounter
+npm start
+``` 
 
 ### iPhone: App in Expo laden
 

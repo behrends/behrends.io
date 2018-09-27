@@ -11,7 +11,7 @@ const siteConfig = {
   baseUrl: '/react-native-buch/' /* base url for your project */,
   projectName: 'react-native-buch',
   headerLinks: [
-    { doc: 'addenda', label: 'Infos zum Buch' },
+    { doc: 'errata', label: 'Infos zum Buch' },
     { href: '/react-native-buch#buy', label: 'Buch kaufen' },
     { page: 'help', label: 'Hilfe' }
   ],

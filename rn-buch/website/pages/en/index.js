@@ -91,6 +91,7 @@ class HomeSplash extends React.Component {
               Infos zum Buch
             </Button>
             <Button href="#buy">Buch kaufen</Button>
+            <Button href="https://www.udemy.com/react-native-einstieg/?couponCode=TWT108">Video-Kurs</Button>
           </PromoSection>
         </div>
       </SplashContainer>

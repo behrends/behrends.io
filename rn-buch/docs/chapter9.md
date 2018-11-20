@@ -6,10 +6,14 @@ sidebar_label: Kapitel 9 - StackNavigator
 
 ### Korrekturen
 
-Wenn `react-navigation` mit npm im Projektordner von `MyJournal` installiert wird, dann handelt es sich jetzt um Version 2 der Navigationsbibliothek. Um einen Stacknavigator zu verwenden, muss in `AppNavigator.js` der entsprechende Import aus `react-navigation` angepasst werden:
+Wenn `react-navigation` mit npm im Projektordner von `MyJournal` installiert wird, 
+dann handelt es sich jetzt um Version 3 der Navigationsbibliothek. 
+Um einen Stacknavigator zu verwenden, muss in `AppNavigator.js` der entsprechende Import 
+aus `react-navigation` angepasst werden:
 
 ```
 import {
+  createAppContainer,
   createBottomTabNavigator,
   createStackNavigator
 } from 'react-navigation';
@@ -21,6 +25,35 @@ aufgerufen werden (anstatt `StackNavigator`):
 ```
 const AppNavigator = createStackNavigator({
 // ... usw. ...
+```
+
+Für das Styling der Kopfleiste im `StackNavigator` muss nun `navigationOptions`
+mit `defaultNavigationOptions` ersetzt werden (die anderen `navigationOptions`
+bleiben unverändert):
+
+```
+const AppNavigator = createStackNavigator(
+  {
+    Home: {
+  
+    // ... usw. ...
+    
+    Edit: EditScreen
+  },
+  {
+    defaultNavigationOptions: {
+      headerTintColor: 'deepskyblue',
+    
+    // ... usw. ...
+  }
+);
+```
+
+Am Ende der Datei `AppNavigator.js` muss `AppNavigator` mit `createAppContainer` umgeben
+und wie folgt exportiert werden:
+
+```
+export default createAppContainer(AppNavigator);
 ```
 
 ### Code

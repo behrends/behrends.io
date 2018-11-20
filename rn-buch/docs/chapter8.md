@@ -6,10 +6,15 @@ sidebar_label: Kapitel 8 - Navigation (Tabs)
 
 ### Korrekturen
 
-Wenn `react-navigation` mit npm im Projektordner von `MyJournal` installiert wird, dann handelt es sich jetzt um Version 2 der Navigationsbibliothek. Um eine Tableiste zu verwenden, muss in `AppNavigator.js` der entsprechende Import aus `react-navigation` angepasst werden:
+Wenn `react-navigation` mit npm im Projektordner von `MyJournal` installiert wird, dann handelt es 
+sich jetzt um Version 3 der Navigationsbibliothek. Um eine Tableiste zu verwenden, muss in `AppNavigator.js` 
+der entsprechende Import aus `react-navigation` angepasst werden:
 
 ```
-import { createBottomTabNavigator } from 'react-navigation';
+import {
+  createAppContainer, 
+  createBottomTabNavigator
+} from 'react-navigation';
 ```
 
 Um eine Tableiste zu erzeugen, muss nun die Funktion `createBottomTabNavigator` in `AppNavigator.js`
@@ -19,6 +24,13 @@ aufgerufen werden (anstatt `TabNavigator`):
 const Tabs = createBottomTabNavigator({
 // ... usw. ...
 ``` 
+
+Am Ende der Datei `AppNavigator.js` muss `Tabs` mit `createAppContainer` umgeben
+und wie folgt exportiert werden:
+
+```
+export default createAppContainer(Tabs);
+```
 
 ### Code
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform, StatusBar } from 'react-native';
 import {
+  createAppContainer,
   createBottomTabNavigator,
   createStackNavigator
 } from 'react-navigation';
@@ -73,7 +74,7 @@ const AppNavigator = createStackNavigator(
     }
   },
   {
-    navigationOptions: {
+    defaultNavigationOptions: {
       headerTintColor: 'deepskyblue',
       headerStyle: {
         ...Platform.select({
@@ -88,4 +89,4 @@ const AppNavigator = createStackNavigator(
   }
 );
 
-export default AppNavigator;
+export default createAppContainer(AppNavigator);

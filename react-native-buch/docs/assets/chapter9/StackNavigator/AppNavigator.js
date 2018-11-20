@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import {
+  createAppContainer,
   createBottomTabNavigator,
   createStackNavigator
 } from 'react-navigation';
@@ -72,4 +73,4 @@ const AppNavigator = createStackNavigator({
   }
 });
 
-export default AppNavigator;
+export default createAppContainer(AppNavigator);

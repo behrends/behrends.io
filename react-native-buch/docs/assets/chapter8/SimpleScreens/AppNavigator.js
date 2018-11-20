@@ -1,5 +1,8 @@
 import React from 'react';
-import { createBottomTabNavigator } from 'react-navigation';
+import {
+  createAppContainer,
+  createBottomTabNavigator
+} from 'react-navigation';
 
 import { SimpleLineIcons } from '@expo/vector-icons';
 
@@ -37,4 +40,4 @@ const Tabs = createBottomTabNavigator({
   }
 });
 
-export default Tabs;
+export default createAppContainer(Tabs);

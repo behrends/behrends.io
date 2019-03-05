@@ -25,3 +25,11 @@ TouchableItem: [App.js](assets/chapter4/TouchableItem/App.js)
 
 Komponenten am Ende des Kapitels: [App.js](assets/chapter4/App.js) und [JournalItems.js](assets/chapter4/JournalItems.js)
 
+### Übungen
+
+KeyBoardAvoidingView und TextInput als eigene Komponentent: 
+[App.js](assets/chapter4/Uebung1/App.js),  
+[MyKeyboardAvoidingView.js](assets/chapter4/Uebung1/MyKeyboardAvoidingView.js) und   
+[MyTextInput.js](assets/chapter4/Uebung1/MyTextInput.js)  
+
+

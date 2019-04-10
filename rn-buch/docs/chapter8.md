@@ -39,3 +39,8 @@ Tableiste mit drei Screens einbinden: [App.js](assets/chapter8/SimpleScreens/App
 Einheitliche Darstellung der Tableiste in Android und iOS: [AppNavigator.js](assets/chapter8/EinheitlicheTableiste/AppNavigator.js)
 
 Screens für die Fotogalerie und Einstellungen: [PhotosScreen.js](assets/chapter8/Screens/PhotosScreen.js) und [SettingsScreen.js](assets/chapter8/Screens/SettingsScreen.js)
+
+### Übungen
+
+In der Fotogalerie die `ScrollView` durch eine `FlatList` ersetzen:
+[PhotosScreen.js](assets/chapter8/Uebung3/PhotosScreen.js)

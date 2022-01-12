@@ -239,7 +239,7 @@ const Buy = props => (
       </h2>
       <PromoSection>
         <Button
-          href="https://www.oreilly.de/buecher/13088/9783960090663-react-native.html"
+          href="https://oreilly.de/produkt/react-native/"
           target="_blank"
         >
           O'Reilly
